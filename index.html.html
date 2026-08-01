@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The ALLTRU Group — Women of U.S. Special Operations</title>
+<meta name="description" content="The ALLTRU Group is a boutique female-forward security and advisory firm powered by the women of U.S. Special Operations.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0c;
+    --bg-1:#141416;
+    --bg-2:#1b1b1e;
+    --line: rgba(244,241,234,0.10);
+    --line-soft: rgba(244,241,234,0.06);
+    --ink:#f4f1ea;
+    --ink-dim:#b6b1a7;
+    --ink-faint:#7c776e;
+    --gold:#c9a769;
+    --gold-bright:#e3c78e;
+    --gold-soft: rgba(201,167,105,0.12);
+    --gold-line: rgba(201,167,105,0.4);
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+    --container: 1180px;
+    --nav-h: 82px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; padding:0; }
+
+  .wrap{ max-width:var(--container); margin:0 auto; padding:0 40px; }
+  section{ scroll-margin-top: var(--nav-h); }
+
+  ::selection{ background:var(--gold); color:#0b0b0c; }
+
+  /* ---------- Eyebrow / labels ---------- */
+  .eyebrow{
+    display:flex; align-items:center; gap:16px;
+    font-family:var(--mono); font-size:1.44rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:28px;
+  }
+  .eyebrow::before{ content:""; width:42px; height:1px; background:var(--gold-line); }
+  .eyebrow.no-dash::before{ display:none; }
+
+  .section-head{ max-width:760px; margin-bottom:56px; }
+  .section-head h2{
+    font-family:var(--serif); font-weight:500; font-size:clamp(2rem, 1.4rem + 2.6vw, 3.1rem);
+    line-height:1.12; margin:0 0 20px; letter-spacing:-0.01em;
+  }
+  .section-head .lead{ font-size:1.08rem; color:var(--ink-dim); max-width:640px; }
+  .section-head .lead + .lead{ margin-top:14px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head.center .eyebrow{ justify-content:center; }
+  .section-head.center .eyebrow::before{ display:none; }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--sans); font-size:0.92rem; font-weight:500;
+    padding:0.95rem 1.7rem; border-radius:2px; white-space:nowrap;
+    transition: all .2s ease;
+  }
+  .btn-gold{ background:var(--gold); color:#171308; }
+  .btn-gold:hover{ background:var(--gold-bright); transform:translateY(-1px); }
+  .btn-line{ border:1px solid var(--line); color:var(--ink); }
+  .btn-line:hover{ border-color:var(--gold-line); color:var(--gold-bright); }
+  .btn-arrow{ transition: transform .2s ease; }
+  .btn:hover .btn-arrow{ transform:translateX(3px); }
+
+  /* ---------- Corner brackets (signature motif) ---------- */
+  .brackets{ position:relative; }
+  .brackets .cnr{ position:absolute; width:22px; height:22px; pointer-events:none; }
+  .brackets .cnr.tl{ top:-1px; left:-1px; border-top:1px solid var(--gold-line); border-left:1px solid var(--gold-line); }
+  .brackets .cnr.tr{ top:-1px; right:-1px; border-top:1px solid var(--gold-line); border-right:1px solid var(--gold-line); }
+  .brackets .cnr.br{ bottom:-1px; right:-1px; border-bottom:1px solid var(--gold-line); border-right:1px solid var(--gold-line); }
+  .brackets .cnr.bl{ bottom:-1px; left:-1px; border-bottom:1px solid var(--gold-line); border-left:1px solid var(--gold-line); }
+
+  /* ================= NAV ================= */
+  header.site-nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    height:var(--nav-h);
+    background:rgba(11,11,12,0.82);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    max-width:var(--container); margin:0 auto; padding:0 40px; height:100%;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .wordmark{ font-family:var(--serif); font-size:1.28rem; font-weight:500; letter-spacing:0.02em; }
+  .wordmark span{ color:var(--gold); }
+  nav.nav-links{ display:flex; align-items:center; gap:36px; }
+  nav.nav-links a{
+    font-size:0.86rem; color:var(--ink-dim); font-weight:500; letter-spacing:0.01em;
+    transition:color .2s ease;
+  }
+  nav.nav-links a:hover{ color:var(--ink); }
+  .nav-cta{ display:flex; align-items:center; gap:20px; flex-shrink:0; }
+  .nav-cta .btn{ flex-shrink:0; }
+  .nav-toggle{ display:none; }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    background:rgba(11,11,12,0.98);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    max-height:0;
+    transition:max-height .3s ease;
+  }
+  .mobile-menu a{
+    padding:16px 22px; font-size:0.95rem; color:var(--ink-dim); border-top:1px solid var(--line-soft);
+  }
+  .mobile-menu a:hover{ color:var(--gold); }
+  .mobile-menu.is-open{ max-height:280px; }
+
+  @media (max-width: 900px){
+    nav.nav-links{ display:none; }
+    .nav-toggle{
+      display:flex; flex-direction:column; justify-content:center; gap:5px; width:26px; height:26px;
+    }
+    .nav-toggle span{ display:block; height:1px; background:var(--ink); transition: transform .2s ease, opacity .2s ease; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+    .mobile-menu{ display:flex; }
+    .nav-cta .btn{ padding:0.65rem 1rem; font-size:0.8rem; }
+  }
+
+  @media (max-width: 420px){
+    .nav-cta .btn{ padding:0.6rem 0.75rem; font-size:0.74rem; }
+    .wordmark{ font-size:1.1rem; }
+  }
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding-top:calc(var(--nav-h) + 40px);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 82% 8%, rgba(201,167,105,0.16), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 10% 100%, rgba(201,167,105,0.07), transparent 60%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background-image: radial-gradient(rgba(244,241,234,0.06) 1px, transparent 1px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 75%);
+            mask-image: linear-gradient(to bottom, black, transparent 75%);
+    pointer-events:none;
+  }
+  .hero-inner{ position:relative; z-index:1; }
+  .hero h1{
+    font-family:var(--serif); font-weight:500; font-size:clamp(2.5rem, 1.6rem + 4.2vw, 4.6rem);
+    line-height:1.06; letter-spacing:-0.015em; max-width:900px; margin:0 0 28px;
+  }
+  .hero h1 em{ color:var(--gold); font-style:italic; }
+  .hero .lead{ font-size:1.15rem; color:var(--ink-dim); max-width:600px; margin-bottom:40px; }
+  .hero-ctas{ display:flex; gap:18px; flex-wrap:wrap; margin-bottom:88px; }
+
+  .credibility{
+    position:relative; z-index:1;
+    border-top:1px solid var(--line-soft);
+    padding-top:26px;
+    display:flex; flex-wrap:wrap; gap:10px 28px;
+    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.05em; color:var(--ink-faint);
+  }
+  .credibility span:not(:last-child)::after{ content:"·"; color:var(--gold-line); margin-left:28px; }
+
+  /* ================= WHO WE ARE ================= */
+  .band{ padding:130px 0; border-bottom:1px solid var(--line-soft); }
+  .band.tight{ padding:110px 0; }
+
+  .who-grid{ display:flex; flex-direction:column; gap:56px; }
+  .who-copy{ max-width:720px; }
+  .who-copy p{ color:var(--ink-dim); font-size:1.05rem; margin-bottom:22px; }
+
+  /* ================= THE STANDARD ================= */
+  .standard{ padding:130px 0; border-bottom:1px solid var(--line-soft); }
+  .standard-inner{ max-width:900px; }
+  .standard blockquote{
+    font-family:var(--serif); font-weight:400; font-style:italic;
+    font-size:clamp(1.5rem, 1.1rem + 1.6vw, 2.15rem);
+    line-height:1.35; color:var(--ink); margin:0 0 40px;
+  }
+  .standard .body-copy p{ color:var(--ink-dim); font-size:1.02rem; margin-bottom:18px; max-width:760px; }
+  .standard .trademark{ margin-top:34px; font-family:var(--mono); font-size:1.56rem; letter-spacing:0.06em; color:var(--gold); text-transform:uppercase; }
+
+  /* ================= OFFERINGS OVERVIEW ================= */
+  .offerings-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; }
+  .offer-card{
+    position:relative; background:var(--bg-1); border:1px solid var(--line);
+    padding:40px 32px 34px; display:flex; flex-direction:column; min-height:340px;
+    transition: border-color .25s ease, transform .25s ease;
+  }
+  .offer-card:hover{ border-color:var(--gold-line); transform:translateY(-4px); }
+  .offer-card .num{
+    font-family:var(--serif); font-weight:300; font-size:2.6rem; color:transparent;
+    -webkit-text-stroke:1px var(--gold-line); margin-bottom:26px; line-height:1;
+  }
+  .offer-card h3{ font-family:var(--serif); font-weight:500; font-size:1.5rem; margin:0 0 14px; line-height:1.2; }
+  .offer-card p{ color:var(--ink-dim); font-size:0.96rem; margin-bottom:auto; padding-bottom:26px; }
+  .offer-card .card-link{
+    display:inline-flex; align-items:center; gap:8px; font-size:0.86rem; font-weight:500; color:var(--gold);
+  }
+  .offer-card .card-link svg{ transition:transform .2s ease; }
+  .offer-card:hover .card-link svg{ transform:translateX(3px); }
+
+  @media (max-width: 900px){ .offerings-grid{ grid-template-columns:1fr; } }
+
+  /* ================= SPEAKERS BUREAU ================= */
+  .market-row{ display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-bottom:70px; }
+  .market-block .kicker{ font-family:var(--mono); font-size:1.4rem; letter-spacing:0.14em; color:var(--gold); text-transform:uppercase; margin-bottom:22px; }
+  .market-block .statement{ font-family:var(--serif); font-size:1.5rem; font-weight:500; line-height:1.35; }
+  .market-block p{ color:var(--ink-dim); font-size:1rem; }
+  .tag-cloud{ display:flex; flex-wrap:wrap; gap:9px; }
+  .tag{
+    font-family:var(--mono); font-size:0.76rem; color:var(--ink-dim);
+    border:1px solid var(--line); padding:7px 13px; border-radius:2px; background:var(--bg-1);
+  }
+  @media (max-width: 860px){ .market-row{ grid-template-columns:1fr; gap:36px; } }
+
+  .pkg-label{ font-family:var(--mono); font-size:1.44rem; letter-spacing:0.14em; color:var(--gold); text-transform:uppercase; margin-bottom:14px; }
+  .pkg-intro{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--gold-bright); margin-bottom:28px; }
+  .pkg-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+  .pkg-card{ background:var(--bg-1); border:1px solid var(--line); padding:28px 26px; transition:border-color .2s ease; }
+  .pkg-card:hover{ border-color:var(--gold-line); }
+  .pkg-card h4{ font-family:var(--serif); font-weight:500; font-size:1.18rem; margin:0 0 10px; }
+  .pkg-card .solves{ font-size:0.88rem; color:var(--ink-dim); margin-bottom:16px; }
+  .pkg-card .solves b{ color:var(--gold); font-weight:500; font-family:var(--mono); font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; display:block; margin-bottom:4px; }
+  .pkg-card .fmt{ font-family:var(--mono); font-size:0.76rem; color:var(--ink-faint); line-height:1.6; }
+  @media (max-width: 700px){ .pkg-grid{ grid-template-columns:1fr; } }
+
+  .avail-note{ margin-top:40px; font-size:0.88rem; color:var(--ink-faint); border-top:1px solid var(--line-soft); padding-top:24px; }
+
+  /* ================= SLIDE SELECTOR (shared: leadership + advisory) ================= */
+  .selector-label{ font-family:var(--mono); font-size:1.44rem; letter-spacing:0.14em; color:var(--gold); text-transform:uppercase; margin-bottom:26px; }
+
+  .selector-list{ border-top:1px solid var(--line); margin-bottom:44px; }
+  .selector-item{
+    display:flex; align-items:center; gap:24px; width:100%; text-align:left;
+    padding:22px 4px; border-bottom:1px solid var(--line);
+    transition: background .2s ease;
+  }
+  .selector-item:hover{ background:var(--gold-soft); }
+  .selector-item .s-num{ font-family:var(--mono); font-size:0.85rem; color:var(--ink-faint); width:26px; flex-shrink:0; }
+  .selector-item .s-text{ flex:1; }
+  .selector-item .s-text h4{
+    font-family:var(--serif); font-weight:500; font-size:1.18rem; margin:0 0 5px; color:var(--ink);
+    transition:color .2s ease;
+  }
+  .selector-item .s-text p{ color:var(--ink-faint); font-size:0.88rem; max-width:620px; }
+  .selector-item .s-arrow{ color:var(--ink-faint); flex-shrink:0; transition: all .2s ease; }
+  .selector-item.is-active{ background:var(--gold-soft); }
+  .selector-item.is-active .s-num{ color:var(--gold); }
+  .selector-item.is-active .s-text h4{ color:var(--gold-bright); }
+  .selector-item.is-active .s-arrow{ color:var(--gold); transform:translateX(3px); }
+  .selector-item:hover .s-arrow{ transform:translateX(3px); }
+
+  .slide-viewer{
+    position:relative;
+    background:var(--bg-1); border:1px solid var(--line);
+    padding:56px 56px 44px;
+  }
+  .slide-panel{ display:none; }
+  .slide-panel.is-active{ display:block; animation: panelIn .35s ease; }
+  @keyframes panelIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+
+  .slide-kicker{ font-family:var(--mono); font-size:1.36rem; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:24px; }
+  .slide-panel h3{ font-family:var(--serif); font-weight:500; font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem); margin:0 0 10px; line-height:1.2; }
+  .slide-panel .slide-sub{ font-family:var(--serif); font-style:italic; color:var(--gold-bright); font-size:1.1rem; margin-bottom:26px; }
+  .slide-panel .slide-body p{ color:var(--ink-dim); font-size:1rem; margin-bottom:16px; max-width:760px; }
+
+  .slide-cols{ display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:36px; padding-top:32px; border-top:1px solid var(--line-soft); }
+  .slide-col .col-label{ font-family:var(--mono); font-size:1.4rem; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase; margin-bottom:20px; }
+  .slide-col ul li{
+    position:relative; padding-left:20px; margin-bottom:12px; color:var(--ink-dim); font-size:0.95rem; line-height:1.55;
+  }
+  .slide-col ul li::before{ content:""; position:absolute; left:0; top:9px; width:6px; height:1px; background:var(--gold); }
+  .slide-col p.solves-copy{ color:var(--ink-dim); font-size:0.95rem; }
+
+  .scope-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px 32px; margin-top:28px; }
+  .scope-grid div{
+    display:flex; align-items:baseline; gap:10px; font-size:0.94rem; color:var(--ink-dim);
+    padding:10px 0; border-bottom:1px solid var(--line-soft);
+  }
+  .scope-grid div::before{ content:"—"; color:var(--gold); flex-shrink:0; }
+  @media (max-width: 760px){
+    .slide-viewer{ padding:36px 26px 30px; }
+    .slide-cols{ grid-template-columns:1fr; gap:28px; }
+    .scope-grid{ grid-template-columns:1fr; }
+  }
+
+  .shared-footnote{ margin-top:30px; font-size:0.88rem; color:var(--ink-faint); }
+
+  /* ================= CADRE ================= */
+  .cadre-band{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+  .cadre-copy p{ color:var(--ink-dim); font-size:1.02rem; margin-bottom:18px; }
+  .cadre-visual{
+    position:relative; aspect-ratio:4/5; background:var(--bg-1); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .cadre-visual::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: repeating-linear-gradient(115deg, rgba(201,167,105,0.05) 0 1px, transparent 1px 34px);
+  }
+  .cadre-visual .cadre-mark{ position:relative; font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--gold); text-align:center; padding:0 30px; }
+  @media (max-width: 860px){ .cadre-band{ grid-template-columns:1fr; } .cadre-visual{ aspect-ratio:16/9; order:-1; } }
+
+  /* ================= CONTACT / CLOSE ================= */
+  .close-band{
+    padding:150px 0 60px; text-align:center; position:relative; overflow:hidden;
+  }
+  .close-band::before{
+    content:"";
+    position:absolute; inset:0;
+    background: radial-gradient(ellipse 800px 400px at 50% 0%, rgba(201,167,105,0.14), transparent 65%);
+    pointer-events:none;
+  }
+  .close-inner{ position:relative; max-width:720px; margin:0 auto; }
+  .close-band h2{
+    font-family:var(--serif); font-weight:500; font-size:clamp(2rem, 1.4rem + 2.4vw, 2.9rem); line-height:1.18; margin:0 0 20px;
+  }
+  .close-band .lead{ color:var(--ink-dim); font-size:1.08rem; margin-bottom:40px; }
+  .close-email{ margin-top:26px; font-family:var(--mono); font-size:0.9rem; color:var(--ink-faint); }
+  .close-email a{ color:var(--gold); }
+
+  footer{ border-top:1px solid var(--line-soft); padding:30px 0 50px; }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-family:var(--mono); font-size:0.72rem; color:var(--ink-faint); letter-spacing:0.03em;
+  }
+  .footer-inner span:not(:last-child)::after{ content:"·"; color:var(--gold-line); margin-left:16px; }
+
+  /* ---------- reveal on scroll (only hides content once JS confirms it can reveal it again) ---------- */
+  .js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  @media (max-width: 640px){
+    .wrap{ padding:0 22px; }
+    .nav-inner{ padding:0 22px; }
+    .band, .band.tight, .standard{ padding:80px 0; }
+    .slide-viewer{ padding:30px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark">ALLTRU<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#who-we-are">Who We Are</a>
+      <a href="#offerings">Offerings</a>
+      <a href="#cadre">The Cadre</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-gold" href="mailto:sarah.burke@alltru.com?subject=Schedule%20a%20Call">Schedule a Call</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#who-we-are">Who We Are</a>
+    <a href="#offerings">Offerings</a>
+    <a href="#cadre">The Cadre</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow no-dash" style="justify-content:flex-start;">WOMEN OF U.S. SPECIAL OPERATIONS</div>
+      <h1>From the most selective units on earth — <em>to your organization.</em></h1>
+      <p class="lead">The ALLTRU Group is a boutique female-forward security and advisory firm powered by the women of U.S. Special Operations. We bring the tradecraft, leadership, and performance standards of the world's most selective units to the organizations that demand the same.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="mailto:sarah.burke@alltru.com?subject=Schedule%20a%20Call">Schedule a Call</a>
+        <a class="btn btn-line" href="#offerings">See Our Offerings</a>
+      </div>
+      <div class="credibility">
+        <span>U.S. Special Operations</span>
+        <span>SAM.gov Registered</span>
+        <span>Featured on Apple TV</span>
+        <span>Women Owned Small Business</span>
+        <span>Service-Disabled Veteran Owned Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHO WE ARE ================= -->
+  <section class="band" id="who-we-are">
+    <div class="wrap">
+      <div class="who-grid reveal">
+        <div class="who-copy">
+          <div class="eyebrow">Who We Are</div>
+          <h2 style="font-family:var(--serif); font-weight:500; font-size:clamp(1.7rem, 1.3rem + 1.6vw, 2.3rem); line-height:1.25; margin-bottom:26px;">Women from U.S. Special Operations. Deployed to your organization.</h2>
+          <p>Our leaders passed the most rigorous selection pipelines in U.S. Special Operations — led in combat, managed multi-billion-dollar programs, and held positions that did not exist for women until they held them. They bring the tradecraft, judgment, network, and leadership standards of the world's most selective units to your stage, your boardroom, your team, and to solve your most complex organizational challenges.</p>
+          <p>Our network extends to 200+ women from every service, every military community, and every interagency organization — women who have served at every level of the Department of War, the Department of State, the Department of Justice, and the intelligence community. We bring that leadership, access, and placement to advise your next move.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE STANDARD ================= -->
+  <section class="standard">
+    <div class="wrap">
+      <div class="standard-inner reveal">
+        <div class="eyebrow">The Standard We Bring</div>
+        <blockquote>Every organization has a moment when it needs something different.</blockquote>
+        <div class="body-copy">
+          <p>That's what we bring. As women, we bring a different eye, a different perspective, a different voice, and a network most organizations have never had access to — a strategic blind spot for any company not yet leveraging its female talent. The military proved it first: women are a source of influence, intelligence, and early warnings that all-male teams cannot replicate. We bring that same methodology to the corporate arena and organizations that strive for total talent optimization.</p>
+        </div>
+        <div class="trademark">Leading with authenticity is our trademark</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFERINGS OVERVIEW ================= -->
+  <section class="band" id="offerings">
+    <div class="wrap">
+      <div class="section-head center reveal" style="margin-left:auto; margin-right:auto;">
+        <div class="eyebrow">Our Offerings</div>
+        <h2>Three offerings. One standard.</h2>
+      </div>
+      <div class="offerings-grid reveal">
+        <div class="offer-card">
+          <div class="num">01</div>
+          <h3>Speakers Bureau</h3>
+          <p>Keynotes. Panels. Fireside chats. Leadership resilience. Delivered by women who have operated at the edge of what is possible.</p>
+          <a class="card-link" href="#speakers-bureau">Learn more
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+        <div class="offer-card">
+          <div class="num">02</div>
+          <h3>Leadership Programming and Human Performance</h3>
+          <p>Deploy the most credentialed women on earth to unleash individual and organizational potential.</p>
+          <a class="card-link" href="#leadership-programming">Learn more
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+        <div class="offer-card">
+          <div class="num">03</div>
+          <h3>Advisory</h3>
+          <p>For private sector companies seeking to win, grow, and protect their government business.</p>
+          <a class="card-link" href="#advisory">Learn more
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFERING 01 — SPEAKERS BUREAU ================= -->
+  <section class="band" id="speakers-bureau">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Offering 01 · Speakers Bureau</div>
+        <h2>The room changes when we walk in.</h2>
+        <p class="lead">People are more important than hardware. SOCOM did not build the world's most effective units by only acquiring better gear — they built them by developing better people. ALLTRU Group's offerings elevate how your people lead, operate, and deliver results.</p>
+      </div>
+
+      <div class="market-row reveal">
+        <div class="market-block">
+          <div class="kicker">Market Position</div>
+          <p class="statement">The largest network of women Special Operations leaders in America.</p>
+        </div>
+        <div class="market-block">
+          <div class="kicker">Talent</div>
+          <div class="tag-cloud">
+            <span class="tag">Combat Veterans</span><span class="tag">Tier 1 Operators</span><span class="tag">Aviation Leaders</span>
+            <span class="tag">Intelligence Officers</span><span class="tag">Senior Enlisted Leaders</span><span class="tag">Commanders</span>
+            <span class="tag">Navy Divers</span><span class="tag">Bomb Technicians</span><span class="tag">Special Operations Officers</span>
+            <span class="tag">Defense Tech Leaders</span><span class="tag">AI Experts</span><span class="tag">Private Equity Managers</span>
+            <span class="tag">National Security Strategists</span><span class="tag">Cyber Experts</span><span class="tag">Athletes</span>
+            <span class="tag">Performance Psychologists</span><span class="tag">Strength &amp; Conditioning Coaches</span>
+            <span class="tag">Performance Dieticians</span><span class="tag">Sleep Experts</span>
+            <span class="tag">Scientists</span><span class="tag">Physiologists</span><span class="tag">Physical Therapists</span>
+            <span class="tag">Women, Peace &amp; Security Experts</span><span class="tag">Civil Affairs Officers</span>
+            <span class="tag">FBI Agents</span><span class="tag">CIA Analysts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="pkg-label">Packages</div>
+        <p class="pkg-intro">Every topic can be fully tailored to your organization's priorities.</p>
+        <div class="pkg-grid">
+          <div class="pkg-card">
+            <h4>Optimizing Human Performance</h4>
+            <div class="solves"><b>Solves for</b>Productivity &amp; sustainable output</div>
+            <div class="fmt">Human Performance Edge · Executive Q&amp;A · Leadership Workshop</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Building High-Performing Teams</h4>
+            <div class="solves"><b>Solves for</b>Trust &amp; communication across hierarchy</div>
+            <div class="fmt">Fireside Chat · Breakout Sessions · Executive Coaching</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Innovation &amp; Technology</h4>
+            <div class="solves"><b>Solves for</b>Innovation strategy &amp; technological adaptation</div>
+            <div class="fmt">Keynote · Fireside Chat · Executive Q&amp;A</div>
+          </div>
+          <div class="pkg-card">
+            <h4>National Security &amp; Geopolitics</h4>
+            <div class="solves"><b>Solves for</b>Strategic foresight amid geopolitical risk</div>
+            <div class="fmt">Keynote · Panel · Policy Briefing / Q&amp;A</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Women Who Changed the Battlefield</h4>
+            <div class="solves"><b>Solves for</b>Culture reset &amp; shared standards</div>
+            <div class="fmt">Keynote · Panel · Book Signing / Fireside Chat</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Leading Through Chaos</h4>
+            <div class="solves"><b>Solves for</b>Decision-making &amp; elite teaming under pressure</div>
+            <div class="fmt">Panel · Executive Q&amp;A · Leadership Workshop</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Leading in Male-Dominated Environments</h4>
+            <div class="solves"><b>Solves for</b>Retention &amp; advancement of women in leadership, or anyone who identifies as an outlier</div>
+            <div class="fmt">Fireside Chat · Panel · Executive Coaching / Mentorship</div>
+          </div>
+          <div class="pkg-card">
+            <h4>Women, Peace &amp; Security</h4>
+            <div class="solves"><b>Solves for</b>Strategic insight on gender, security &amp; global stability</div>
+            <div class="fmt">Keynote · Panel · Policy Briefing / Q&amp;A</div>
+          </div>
+        </div>
+        <p class="avail-note">Available to athletic teams, government clients, and private sector companies. Fully customizable — delivered on-site, remotely, or integrated into any ALLTRU engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFERING 02 — EXPERIENTIAL LEADERSHIP PROGRAMMING ================= -->
+  <section class="band" id="leadership-programming">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Offering 02 · Leadership Programming and Human Performance</div>
+        <h2>Built to change how your people lead, think, and perform.</h2>
+        <p class="lead">We do not teach leadership — we build it, the way Special Operations builds people. When your organization needs people who can think clearly under pressure, lead without a script, work as a team, and perform when it counts.</p>
+      </div>
+
+      <div class="reveal" id="elp-selector">
+        <div class="selector-label">Select a Program Area</div>
+        <div class="selector-list" role="tablist" aria-label="Program areas">
+
+          <button class="selector-item is-active" data-group="elp" data-target="team-dev" role="tab" aria-selected="true">
+            <span class="s-num">01</span>
+            <span class="s-text">
+              <h4>Leader &amp; Team Development</h4>
+              <p>How elite teams are built — trust, cohesion, and performance under pressure, applied to your team.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="elp" data-target="human-perf" role="tab" aria-selected="false">
+            <span class="s-num">02</span>
+            <span class="s-text">
+              <h4>Human Performance</h4>
+              <p>The operating system underneath every ALLTRU offering — strength, recovery, nutrition, and stress regulation.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="elp" data-target="offsites" role="tab" aria-selected="false">
+            <span class="s-num">03</span>
+            <span class="s-text">
+              <h4>Corporate Offsites</h4>
+              <p>Take the team out of the building. Operator-led environments that surface how people really lead and follow.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="elp" data-target="cultural-assessments" role="tab" aria-selected="false">
+            <span class="s-num">04</span>
+            <span class="s-text">
+              <h4>Cultural Assessments</h4>
+              <p>An honest read on trust, friction, and psychological safety — before you try to lead the change.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+        </div>
+
+        <div class="slide-viewer brackets" id="elp-viewer" aria-live="polite">
+          <span class="cnr tl"></span><span class="cnr tr"></span><span class="cnr br"></span><span class="cnr bl"></span>
+
+          <div class="slide-panel is-active" data-panel="team-dev">
+            <div class="slide-kicker">Leadership Programming and Human Performance · 001</div>
+            <h3>Leader &amp; Team Development</h3>
+            <div class="slide-sub">How elite teams are built.</div>
+            <div class="slide-body">
+              <p>SOCOM does not build elite teams by accident. It is a deliberate process — identifying the unique strengths each person brings, building trust through shared adversity, and creating the kind of cohesion that holds when things go wrong.</p>
+              <p>ALLTRU brings that same methodology to your leadership team or department. This is not a trust-fall exercise. It is a structured process that helps your team understand how they actually operate under pressure — and what is getting in the way of performing at the level they are capable of.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">Format</div>
+                <ul>
+                  <li>Half-day or full-day sessions for intact teams</li>
+                  <li>Can include team assessments, structured exercises, and facilitated debriefs</li>
+                  <li>Scales from a single leadership team to multiple departments</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Team cohesion, trust-building, communication breakdowns, performance under pressure.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="human-perf">
+            <div class="slide-kicker">Leadership Programming and Human Performance · 002</div>
+            <h3>Human Performance</h3>
+            <div class="slide-sub">Delivered by our Human Performance expert team.</div>
+            <div class="slide-body">
+              <p>SOCOM does not leave human performance to chance. Neither should you. The same protocols that keep operators mission-ready will keep your organization performing. Sleep, nutrition, movement, and stress regulation are not wellness benefits — they are the infrastructure that makes elite leadership possible. The organizations that invest in human performance outperform the ones that do not. Every time.</p>
+            </div>
+            <div class="slide-col" style="margin-top:36px; padding-top:32px; border-top:1px solid var(--line-soft);">
+              <div class="col-label">Program Scope</div>
+              <div class="scope-grid">
+                <div>Strength &amp; Conditioning Programming</div>
+                <div>Cognitive Performance</div>
+                <div>Movement Assessment &amp; Physical Readiness</div>
+                <div>Nervous System Regulation</div>
+                <div>Injury Prevention &amp; Physical Durability</div>
+                <div>Sleep Optimization &amp; Recovery Protocols</div>
+                <div>Biofeedback Training</div>
+                <div>Nutrition &amp; Supplementation Programming</div>
+                <div>Bloodwork and Hormone Assessment</div>
+                <div>Individualized Performance Protocols</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="offsites">
+            <div class="slide-kicker">Leadership Programming and Human Performance · 003</div>
+            <h3>Corporate Offsites</h3>
+            <div class="slide-sub">Take the team out of the building.</div>
+            <div class="slide-body">
+              <p>Some of the most important leadership conversations do not happen in a conference room. ALLTRU's offsites take your team into environments designed to surface how people actually lead, follow, communicate, and problem-solve.</p>
+              <p>These are not corporate retreats with a ropes course bolted on. They are built and led by operators who have spent careers leading teams in demanding outdoor environments — and who know how to use that environment to create real insight, not just a fun day.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">Format</div>
+                <ul>
+                  <li>Half-day, full-day, or multi-day options</li>
+                  <li>Locations can be client-specified or ALLTRU-recommended</li>
+                  <li>Often paired with Leader &amp; Team Development</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Team building, leadership under unfamiliar conditions, breaking down hierarchy, building resilience.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="cultural-assessments">
+            <div class="slide-kicker">Leadership Programming and Human Performance · 004</div>
+            <h3>Cultural Assessments</h3>
+            <div class="slide-sub">See your culture as it actually operates.</div>
+            <div class="slide-body">
+              <p>Every leadership program works better when you know what you're actually dealing with. ALLTRU's cultural assessments are built the way our operators assess any environment before acting on it — direct observation, structured interviews, and an honest read on trust, friction, and psychological safety across your organization.</p>
+              <p>We deliver findings your team can act on immediately, not a binder that sits on a shelf.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">Format</div>
+                <ul>
+                  <li>Lunch &amp; Learn — an introductory session on the assessment framework and early observations</li>
+                  <li>One-Day Full Assessment &amp; Offsite — structured assessment delivered on-site with the full team</li>
+                  <li>Six- to Twelve-Month Cultural Deep Dive — surveys, interviews, and ongoing recommendations</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Diagnosing trust and friction points before they become retention problems, benchmarking culture ahead of a leadership program, giving leadership an honest, evidence-based read on how the organization actually operates.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="shared-footnote">Available to athletic teams, government clients, and private sector companies. Fully customizable — delivered on-site, remotely, or integrated into any ALLTRU engagement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFERING 03 — ADVISORY ================= -->
+  <section class="band" id="advisory">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Offering 03 · Advisory</div>
+        <h2>Corporate clients seeking government access and expertise.</h2>
+        <p class="lead">The ALLTRU Network gives corporate clients a direct line to 200+ women who have led, evaluated, and operated within the most elite Special Operations and intelligence community organizations on earth. You do not get one advisor. You get access to us all.</p>
+      </div>
+
+      <div class="reveal" id="adv-selector">
+        <div class="selector-label">Select an Offering</div>
+        <div class="selector-list" role="tablist" aria-label="Advisory offerings">
+
+          <button class="selector-item is-active" data-group="adv" data-target="market-access" role="tab" aria-selected="true">
+            <span class="s-num">01</span>
+            <span class="s-text">
+              <h4>Market Access &amp; Capture Advisory</h4>
+              <p>Insider intelligence from 200+ women who have been the buyer. We know what wins and what fails before it hits the desk.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="adv" data-target="biz-dev" role="tab" aria-selected="false">
+            <span class="s-num">02</span>
+            <span class="s-text">
+              <h4>Government Business Development</h4>
+              <p>Warm introductions through a trusted network built over careers inside the defense and intelligence community.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="adv" data-target="program-insights" role="tab" aria-selected="false">
+            <span class="s-num">03</span>
+            <span class="s-text">
+              <h4>Program Insights &amp; Advisory</h4>
+              <p>Networked, firsthand insight from 200+ operators and intelligence professionals — not one opinion, but a collective perspective.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+          <button class="selector-item" data-group="adv" data-target="gtm" role="tab" aria-selected="false">
+            <span class="s-num">04</span>
+            <span class="s-text">
+              <h4>Defense Tech Go-to-Market Strategy</h4>
+              <p>Translate your capability into government language and build the relationships that turn technology into a funded program.</p>
+            </span>
+            <span class="s-arrow">→</span>
+          </button>
+
+        </div>
+
+        <div class="slide-viewer brackets" id="adv-viewer" aria-live="polite">
+          <span class="cnr tl"></span><span class="cnr tr"></span><span class="cnr br"></span><span class="cnr bl"></span>
+
+          <div class="slide-panel is-active" data-panel="market-access">
+            <div class="slide-kicker">Advisory · 001</div>
+            <h3>Market Access &amp; Capture Advisory</h3>
+            <div class="slide-sub">You do not get one advisor with one perspective. You get 200.</div>
+            <div class="slide-body">
+              <p>Most companies trying to enter the government market get one advisor with one set of relationships. ALLTRU gives you direct access to 200+ women who have spent careers inside the U.S. defense, intelligence, and national security enterprise. They have been the buyer, the evaluator, the operator, and the decision maker — and they know what positioning fails before the proposal hits the desk.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">What We Do</div>
+                <ul>
+                  <li>Government customer intelligence</li>
+                  <li>Opportunity identification</li>
+                  <li>Solution positioning for procurement</li>
+                  <li>Proposal language and strategy</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Winning government contracts faster. Avoiding the positioning mistakes that cost companies years. Understanding the buyer before the bid.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="biz-dev">
+            <div class="slide-kicker">Advisory · 002</div>
+            <h3>Government Business Development</h3>
+            <div class="slide-sub">Relationships built over careers. Now available to your organization.</div>
+            <div class="slide-body">
+              <p>Relationships in the defense and intelligence community are built over careers, not business cards. ALLTRU's 200+ network gives your organization direct access to the relationships that move government business — introductions to the right decision makers, commanders, program managers, and acquisition professionals at the right moment.</p>
+              <p>This is not cold outreach dressed up as strategy. It is a warm, trusted network opening doors that most companies spend years trying to find.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">What We Do</div>
+                <ul>
+                  <li>Decision maker introductions</li>
+                  <li>Command and agency relationship access</li>
+                  <li>Program manager connections</li>
+                  <li>Acquisition professional access</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Getting in the room. Building the relationships that generate government revenue. Accelerating a business development timeline that typically takes years.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="program-insights">
+            <div class="slide-kicker">Advisory · 003</div>
+            <h3>Program Insights &amp; Advisory</h3>
+            <div class="slide-sub">Not one opinion. The collective perspective of 200+ people who have been there.</div>
+            <div class="slide-body">
+              <p>Before you brief a government client, pitch a program office, or launch a defense product, you need to know how it will land with the people who will use it, buy it, or reject it. ALLTRU's network gives your organization networked, firsthand insight from the people who have operated, evaluated, and procured in the exact environments you are targeting.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">What We Do</div>
+                <ul>
+                  <li>Product and capability feedback</li>
+                  <li>Program positioning review</li>
+                  <li>Decision-making intelligence</li>
+                  <li>Operational environment insight</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Information dominance before the pitch. Knowing how your product or program will land before it does. Making decisions with the confidence of collective insider insight.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-panel" data-panel="gtm">
+            <div class="slide-kicker">Advisory · 004</div>
+            <h3>Defense Tech Go-to-Market Strategy</h3>
+            <div class="slide-sub">The defense market is unlike any other. We have lived inside it.</div>
+            <div class="slide-body">
+              <p>The defense technology market does not follow standard go-to-market rules — and most commercial playbooks fail the moment they meet a government procurement process. ALLTRU gives defense technology companies a direct line to 200+ women who have spent careers inside the organizations your technology is designed to serve, helping you translate capability into government language and build the relationships that turn a promising technology into a funded program.</p>
+            </div>
+            <div class="slide-cols">
+              <div class="slide-col">
+                <div class="col-label">What We Do</div>
+                <ul>
+                  <li>Capability translation into government language</li>
+                  <li>Acquisition pathway identification</li>
+                  <li>Entry point and beachhead strategy</li>
+                  <li>Relationship-driven program development</li>
+                </ul>
+              </div>
+              <div class="slide-col">
+                <div class="col-label">Solves For</div>
+                <p class="solves-copy">Shortening the timeline from commercial technology to funded government program. Avoiding the translation failures that stall promising defense tech companies.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <p class="shared-footnote">The ALLTRU Network · 200+ women operators and intelligence professionals · You do not get one advisor. You get us all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CADRE ================= -->
+  <section class="band" id="cadre">
+    <div class="wrap">
+      <div class="cadre-band reveal">
+        <div class="cadre-copy">
+          <div class="eyebrow">The Cadre</div>
+          <h2 style="font-family:var(--serif); font-weight:500; font-size:clamp(1.9rem, 1.4rem + 2vw, 2.6rem); line-height:1.18; margin-bottom:24px;">The women behind the work.</h2>
+          <p>The Cadre is not one archetype. It's combat veterans and cognitive scientists, Tier 1 operators and physical therapists, intelligence officers and strength coaches, cyber experts and performance psychologists. Every engagement draws from the discipline it actually needs — not whichever speaker happens to be free.</p>
+          <p>What unites them isn't a job title. It's proof. Every woman in the Cadre built her credibility somewhere that does not forgive mediocrity — in combat, in the intelligence community, in elite human performance science. They bring that same standard to your stage, your team, and your organization.</p>
+          <a class="btn btn-line" href="#contact" style="margin-top:8px;">Meet the Cadre
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+        <div class="cadre-visual">
+          <span class="cnr tl" style="border-color:var(--gold-line);"></span>
+          <div class="cadre-mark">"The women behind the work."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT / CLOSE ================= -->
+  <section class="close-band" id="contact">
+    <div class="wrap">
+      <div class="close-inner reveal">
+        <h2>Ready to bring the world's most elite women to your organization?</h2>
+        <p class="lead">All engagements begin with a single confidential conversation.</p>
+        <a class="btn btn-gold" href="mailto:sarah.burke@alltru.com?subject=Request%20a%20Briefing">Request a Briefing</a>
+        <div class="close-email"><a href="mailto:sarah.burke@alltru.com">sarah.burke@alltru.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div><span>The ALLTRU Group</span><span id="year">© 2026</span><span>SAM.gov Registered</span><span>CAGE Code available upon request</span></div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+  // ---------- Slide selector (Executive Coaching, etc.) ----------
+  function initSelector(groupName){
+    var items = document.querySelectorAll('.selector-item[data-group="' + groupName + '"]');
+    var panels = document.querySelectorAll('#' + (groupName === 'elp' ? 'elp-viewer' : 'adv-viewer') + ' .slide-panel');
+    var viewer = document.getElementById(groupName === 'elp' ? 'elp-viewer' : 'adv-viewer');
+
+    items.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var target = btn.getAttribute('data-target');
+
+        items.forEach(function(b){
+          var active = (b === btn);
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+
+        panels.forEach(function(p){
+          p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+        });
+
+        if (viewer){
+          var rect = viewer.getBoundingClientRect();
+          var navH = 82;
+          if (rect.top < navH || rect.bottom > window.innerHeight){
+            viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  }
+  initSelector('elp');
+  initSelector('adv');
+
+  // ---------- Mobile menu ----------
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (navToggle && mobileMenu){
+    navToggle.addEventListener('click', function(){
+      var open = mobileMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        mobileMenu.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  }
+
+  // ---------- Reveal on scroll ----------
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---------- Footer year ----------
+  document.getElementById('year').textContent = '© ' + new Date().getFullYear();
+</script>
+
+</body>
+</html>
